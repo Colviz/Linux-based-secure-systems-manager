@@ -29,3 +29,12 @@
 * [nmap](https://nmap.org/)
 * [angryip](http://angryip.org/)
 * [ntop](http://www.ntop.org/)
+
+## Presentation -
+* Slide 1 - Vince (ie. name of project)
+* Slide 2 - What is Vince?
+* Slide 3 - Working of Vince.
+* Slide 4 - Main components it targets.
+* Slide 5 - Is data transmission secure in Vince?
+* Slide 6 - Advantages and limitaions.
+* Slide 7 - Thank You (Name of Team members, roll no. wise)
