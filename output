@@ -1,0 +1,4 @@
+Address                  HWtype  HWaddress           Flags Mask            Iface
+172.16.20.1              ether   e8:e7:32:b0:b3:20   C                     enp4s0f0
+10.42.0.254              ether   14:2d:27:93:aa:19   C                     wlp3s0
+192.168.10.1             ether   00:30:f1:bf:3a:01   C                     enp4s0f0
