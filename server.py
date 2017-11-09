@@ -6,7 +6,7 @@ def get_my_ip():
     return s.getsockname()[0]
 
 def Main():
-	host = '192.168.43.130'
+	host = get_my_ip()
 	port = 5001
 
 	s = socket.socket()
