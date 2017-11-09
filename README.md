@@ -1,5 +1,7 @@
 # Vince
+> In pre development phase.
 > There can be discrepencies in the content provided below.
+> Please refer **learning** branch.
 
 ## Main Components to consider -
 > Just for reference (not sure about their accuracy)
