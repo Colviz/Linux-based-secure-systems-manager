@@ -14,6 +14,17 @@
 7. Advantages & limitations.
 8. Is there any stable software that can pass our call through any system reserved port rather than above 1024 ports.
 
+## Roadmap -
+### Requirements -
+1. Server side (Mobile agent)
+2. Client side (script installed in system)
+
+### Working of server side script -
+* payload - | Payload 1 (Shell Script/Code) | Playlod 2 (Data file)|
+
+### Working of client side script - 
+* takes payload 1 into consideration and then will execute accordingly.
+
 ## Try -
 > Implement these things for better understanding of the project.
 1. Chat server (single client & multiple clients/group chat).
@@ -35,8 +46,30 @@
 ## Presentation -
 * Slide 1 - Vince (ie. name of project)
 * Slide 2 - What is Vince?
+  * Its an autonomous entity.
+  * Will be used to manage computers in a subnet.
+  
 * Slide 3 - Working of Vince.
+  * Checks no. of live systems & gets their IP.
+  * Establish connection with hosts (underway).
+  * Sends payload using UDP.
+    * payload - | Payload 1 (Shell Script) | Playlod 2 (Data file)|
+  * Sends response code.
+
 * Slide 4 - Main components it targets.
+  * IP range
+  * Sockets
+  * Shell scripts
+  * Responses
+
 * Slide 5 - Is data transmission secure in Vince?
+  * Can use asymmetric encryption & encrypt data and payload before sending.
+
 * Slide 6 - Advantages and limitaions.
+  * Easy management and hence utilization of resources.
+  * Flexible enough to transfer data securily.
+  
+  * Only for subnets.
+  * It requires credentials.
+  
 * Slide 7 - Thank You (Name of Team members, roll no. wise)
