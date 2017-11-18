@@ -32,6 +32,7 @@
 3. Code and Data - Transport both as payload (single client & multiple clients).
 
 ## Useful links to refer -
+* [Important - UDP Communicatios](https://wiki.python.org/moin/UdpCommunication)
 * [Sockets - Python 3.4](https://docs.python.org/3.4/howto/sockets.html)
 * [Sockets - Python 2.7](https://docs.python.org/2.7/library/socket.html)
 * [Sockets - Python Tips](https://pythontips.com/2013/08/06/python-socket-network-programming/)
