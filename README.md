@@ -1,5 +1,5 @@
 # Vince
-> In pre development phase.
+> In development phase.
 > There can be discrepencies in the content provided below.
 > Please refer **learning** branch.
 
