@@ -1,4 +1,7 @@
-"""import socket
+"""
+#Code for sending UDP message to a specific client 
+
+import socket
 
 UDP_IP = "192.168.43.234"
 UDP_PORT = 5005
@@ -10,7 +13,8 @@ print "message:", MESSAGE
  
 sock = socket.socket(socket.AF_INET, # Internet
                       socket.SOCK_DGRAM) # UDP
-sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))"""
+sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))
+"""
 
 from socket import *
 cs = socket(AF_INET, SOCK_DGRAM)
