@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from socket import *
 cs = socket(AF_INET, SOCK_DGRAM)
 cs.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
