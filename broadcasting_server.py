@@ -17,13 +17,26 @@ file_name=sys.argv[1]                   #Taking file name from command line argu
 ###Writing server's IP to file
 
 #Taking the ip as input from server_ip file
-fp = open("server_ip","r")
+fp = open("Vince/server_ip","r")
 ip = fp.read()
 fp.close()
 
-file = open(file_name,"a") 
-file.write(ip) 
-file.close() 
+written = 0
+ipp = ip
+
+#Checking if IP already exists
+fl = open(file_name,'r')
+lines = fl.readlines()
+for line in lines:
+  if line == ipp:
+    written = 1
+fl.close()
+
+#If not written then write IP to file
+if written !=1:
+	file = open(file_name,"a") 
+	file.write(ip) 
+	file.close() 
 #Writing IP ends here
 
 ###Putting the file's content in buffer
@@ -33,10 +46,14 @@ data = f.read(buf)                      #Taking the data from file into data var
 
 ###Sending the data
 
+print("Sending File...")
+print("File sent")
 cs.sendto(data,addr)                    #Sending data to the broadcasting address
 while (data):
-  if(cs.sendto(data,addr)):
+  #if(cs.sendto(data,addr)):
+  if(cs.sendto(data,(addr,port))):
     print("Sending File...")
     data = f.read(buf)
 f.close()                               #Closing the opened file
 cs.close()                              #Closing the socket connection
+print("File sent")
