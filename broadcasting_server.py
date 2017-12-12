@@ -17,7 +17,7 @@ file_name=sys.argv[1]                   #Taking file name from command line argu
 ###Writing server's IP to file
 
 #Taking the ip as input from server_ip file
-fp = open("Vince/server_ip","r")
+fp = open("server_ip","r")
 ip = fp.read()
 fp.close()
 
