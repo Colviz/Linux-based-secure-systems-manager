@@ -14,6 +14,15 @@ def OSinfo(thisisit):         # OSinfo function returns 0 on success
         return 1
     return osstdout
 
+#Function for creating/adding log entries
+def correction(command):
+  try:
+    command = "thefuck "+command
+    correct = subprocess.call(command.split())
+  except subprocess.CalledProcessError:
+    return 1
+  return correct
+
 host=""
 port = 9999           #Port being used by server
 s = socket(AF_INET,SOCK_DGRAM)
@@ -23,7 +32,7 @@ addr = (host,port)
 buf=1024                #Buffer size
 
 #Writing the received data to file
-file = "file.txt"       #Name of file
+file = "files/file.txt"       #Name of file
 f = open(file,'wb')             #Opening file in write mode
 data,addr = s.recvfrom(buf)
 try:
@@ -56,10 +65,13 @@ with open(file) as fp:
    array = []
    while num_lines:
        print("Line {}: {}".format(cnt, line.strip()))   #Print which line and command is executing
-       j = OSinfo(line)           #j is status returned by OSinfo
-       array.append(j)
+       exec_status = OSinfo(line)           #exec_status is status returned by OSinfo
+       if exec_status !=0 :
+        correction(line)
+       array.append(exec_status)
        num_lines -= 1
        line = fp.readline()
        cnt += 1
 
-print(array)            #Prints all the statuses
+#Prints all the statuses
+print(array)            
