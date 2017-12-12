@@ -45,9 +45,8 @@ f=open(file_name,"rb")                  #Opening file in read mode
 data = f.read(buf)                      #Taking the data from file into data variable
 
 ###Sending the data
-
 print("Sending File...")
-print("File sent")
+print("File sent\n")
 cs.sendto(data,addr)                    #Sending data to the broadcasting address
 while (data):
   #if(cs.sendto(data,addr)):
