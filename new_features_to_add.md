@@ -9,3 +9,8 @@
 7. It should work on different networks.
 8. Client can request something/Chat portal.
 9. If Multiple admins broadcast then it should go in queue (or anything reliable).
+
+
+## Features assigned to developers
+* Rishabh - 1st and 2nd
+* Akhilesh - 8th
