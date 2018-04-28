@@ -98,33 +98,19 @@ The trick is that the bash shell knows the language of the file via the shebang.
 * [angryip](http://angryip.org/)
 * [ntop](http://www.ntop.org/)
 
-## Presentation -
-* Slide 1 - Vince (ie. name of project)
-* Slide 2 - What is Vince?
-  * Its an autonomous entity.
-  * Will be used to manage computers in a subnet.
-  
-* Slide 3 - Working of Vince.
-  * Checks no. of live systems & gets their IP.
-  * Establish connection with hosts (underway).
-  * Sends payload using UDP.
-    * payload - | Payload 1 (Shell Script) | Playlod 2 (Data file)|
-  * Sends response code.
+## Running the project
 
-* Slide 4 - Main components it targets.
-  * IP range
-  * Sockets
-  * Shell scripts
-  * Responses
+* For running the client script
+```
+	python broadcasting_client.py
+```
+Note - ``client`` will save the received file to ``files/file.txt``.
 
-* Slide 5 - Is data transmission secure in Vince?
-  * Can use asymmetric encryption & encrypt data and payload before sending.
+* For running the server script (it requires input file)
+```
+	python broadcasting_server.py temp.txt
+```
+Note - ``temp.txt`` holds all the commands that needs to be executed on the clients.
 
-* Slide 6 - Advantages and limitaions.
-  * Easy management and hence utilization of resources.
-  * Flexible enough to transfer data securily.
-  
-  * Only for subnets.
-  * It requires credentials.
-  
-* Slide 7 - Thank You (Name of Team members, roll no. wise)
+### Installing Cryptography
+* Install using the documentation [here](https://cryptography.io/en/latest/) and [here](https://cryptography.io/en/latest/installation/)
