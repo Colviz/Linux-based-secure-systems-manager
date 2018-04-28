@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from subprocess import call
 import sys
 from socket import *
 cs = socket(AF_INET, SOCK_DGRAM)
@@ -38,6 +39,12 @@ if written !=1:
 	file.write(ip) 
 	file.close() 
 #Writing IP ends here
+
+
+#Encrypting the file with GPG key
+call(["gpg", "-r", "trialuser@mailinator.com", "-e", file_name])
+file_name = file_name+".gpg"		#New file name
+
 
 ###Putting the file's content in buffer
 
