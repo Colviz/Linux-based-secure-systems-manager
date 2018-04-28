@@ -40,7 +40,6 @@ if written !=1:
 	file.close() 
 #Writing IP ends here
 
-
 #Encrypting the file with GPG key
 call(["gpg", "-r", "trialuser@mailinator.com", "-e", file_name])
 file_name = file_name+".gpg"		#New file name

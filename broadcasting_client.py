@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from subprocess import call
 from random import randint
 from socket import *
 import sys
@@ -32,7 +33,7 @@ addr = (host,port)
 buf=1024                #Buffer size
 
 #Writing the received data to file
-file = "files/file.txt"       #Name of file
+file = "files/received-file.gpg"       #Name of file
 f = open(file,'wb')             #Opening file in write mode
 data,addr = s.recvfrom(buf)
 try:
@@ -45,6 +46,18 @@ except timeout:
     f.close()           #Closing the opened file
     s.close()           #Closing the socket connection
 print("File Downloaded\n")
+
+#Decrypting the file with GPG key
+file_new = "files/decrypted-file.txt"       #Name of new file
+file_new = open(file_new,"wb")
+
+#command - gpg --passphrase passphrase -d files/file.txt
+call(["gpg", "--passphrase", "passphrase", "-d", file], stdout=file_new)
+file_new.close()
+f.close() 
+
+#file being used to save the decrypted contents
+file = "files/decrypted-file.txt"       #Name of file
 
 #Getting no. of lines in file
 num_lines = sum(1 for line in open(file,'r'))

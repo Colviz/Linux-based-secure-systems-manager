@@ -112,5 +112,6 @@ Note - ``client`` will save the received file to ``files/file.txt``.
 ```
 Note - ``temp.txt`` holds all the commands that needs to be executed on the clients.
 
-### Installing Cryptography
-* Install using the documentation [here](https://cryptography.io/en/latest/) and [here](https://cryptography.io/en/latest/installation/)
+###  Generating a GPG key
+* For generating a GPG key refer [here](https://help.github.com/articles/generating-a-new-gpg-key/)
+* Documentation regarding GPG is [here](https://pythonhosted.org/gnupg/gnupg.html)
