@@ -2,6 +2,7 @@
 
 from subprocess import call
 import sys
+import os
 from socket import *
 cs = socket(AF_INET, SOCK_DGRAM)
 cs.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
@@ -53,7 +54,7 @@ if(is_empty(sys.argv[2] and sys.argv[3])!=0):
 	multicasting_file = sys.argv[3]
 	with open(multicasting_file) as f:
     	content=f.readlines()
-		#remove whitespace characters like `\n` at the end of each line
+		#remove whitespace characters like line ending character at the end of each line
 		content = [x.strip() for x in content]
 		#Sending the data
 		while(content):
@@ -75,14 +76,20 @@ f=open(file_name,"rb")                  #Opening file in read mode
 data = f.read(buf)                      #Taking the data from file into data variable
 
 ###Sending the data
-print("Sending File...")
-print("File sent\n")
+print("##################################################")
+print("#                 Sending File...                #")
+print("##################################################\n")
+print("##################################################")
+print("#                   File sent                    #")
+print("##################################################")
+os.remove(file_name)					#Delete the intermediate (encrypted file)
 cs.sendto(data,addr)                    #Sending data to the broadcasting address
-while (data):
+#The code below was responsible for all the errors during execution
+'''while (data):
   #if(cs.sendto(data,addr)):
   if(cs.sendto(data,(addr,port))):
     print("Sending File...")
     data = f.read(buf)
 f.close()                               #Closing the opened file
 cs.close()                              #Closing the socket connection
-print("File sent")
+'''

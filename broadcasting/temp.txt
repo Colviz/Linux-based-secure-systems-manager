@@ -1,6 +1,4 @@
 date
 date
-dnf -y update
-time
 uptime
 10.42.0.1

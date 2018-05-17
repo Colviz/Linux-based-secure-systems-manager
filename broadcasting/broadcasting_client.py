@@ -45,7 +45,9 @@ try:
 except timeout:
     f.close()           #Closing the opened file
     s.close()           #Closing the socket connection
-print("File Downloaded\n")
+print("##################################################")
+print("#                File Downloaded                 #")
+print("##################################################")
 
 #Decrypting the file with GPG key
 file_new = "files/decrypted-file.txt"       #Name of new file
@@ -61,11 +63,15 @@ file = "files/decrypted-file.txt"       #Name of file
 
 #Getting no. of lines in file
 num_lines = sum(1 for line in open(file,'r'))
-print("No. of commands in file are : ") 
+print("##################################################")
+print("#           No. of commands in file are :        #") 
+print("##################################################")
 print(num_lines)          #Printing no. of lines
 num_lines = num_lines-1
 #Commands in file and server IP
-print("List of commands and server IP :")
+print("\n##################################################")
+print("#         List of commands and server IP :       #")
+print("##################################################")
 a = open(file,'r')
 file_contents = a.read()
 print(file_contents)
@@ -77,7 +83,7 @@ with open(file) as fp:
    cnt = 1
    array = []
    while num_lines:
-       print("Line {}: {}".format(cnt, line.strip()))   #Print which line and command is executing
+       print("# Line {}: {}".format(cnt, line.strip()))   #Print which line and command is executing
        exec_status = OSinfo(line)           #exec_status is status returned by OSinfo
        if exec_status !=0 :
         correction(line)
@@ -86,5 +92,10 @@ with open(file) as fp:
        line = fp.readline()
        cnt += 1
 
+print(" ")
+print("##################################################")
+print("#  Below is the status of the commands executed  #")
+print("#           0 - successful execution             #")
+print("##################################################")
 #Prints all the statuses
 print(array)            
