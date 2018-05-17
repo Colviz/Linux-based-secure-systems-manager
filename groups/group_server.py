@@ -67,19 +67,10 @@ data = f.read(buf)                      #Taking the data from file into data var
 
 ###Sending the data
 print("##################################################")
-print("#                 Sending File...                #")
+print("#       Sending File to the selected group       #")
 print("##################################################\n")
 print("##################################################")
-print("#                   File sent                    #")
+print("#             File sent to the group             #")
 print("##################################################")
 os.remove(file_name)                    #Delete the intermediate (encrypted file)
 cs.sendto(data,addr)                    #Sending data to the broadcasting address
-#The code below was responsible for all the errors during execution
-'''while (data):
-  #if(cs.sendto(data,addr)):
-  if(cs.sendto(data,(addr,port))):
-    print("Sending File...")
-    data = f.read(buf)
-f.close()                               #Closing the opened file
-cs.close()                              #Closing the socket connection
-'''
