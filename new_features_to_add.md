@@ -1,13 +1,13 @@
 # Addition of new features for major 2 -
 
-[x] Payload authentication using asymmetric cryptography (RSA).
+* [x] Payload authentication using asymmetric cryptography (RSA).
 2. Allow multicasting.
 3. Allow formation of client groups.
 4. Allow broadcasting to different networks simultaneously.
 5. Status execution callbacks (return statuses of commands/instructions).
-[x] Allow multiple admins (hence multiple keys).
+* [x] Allow multiple admins (hence multiple keys).
 7. It should work on different networks.
-[x] Client can request something/Chat portal.
+* [x] Client can request something/Chat portal.
 9. If Multiple admins broadcast then it should go in queue (or anything reliable).
 
 
