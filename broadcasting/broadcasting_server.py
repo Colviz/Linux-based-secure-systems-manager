@@ -44,34 +44,10 @@ if written !=1:
 
 #Encrypting the file with GPG key
 call(["gpg", "-r", "trialuser@mailinator.com", "-e", file_name])
-file_name = file_name+".gpg"		#New file name
+file_name = file_name+".gpg"			#New file name
 
-'''
-#For MULTICASTING
-if(is_empty(sys.argv[2] and sys.argv[3])!=0):
-	f=open(file_name,"rb")                  #Opening file in read mode 
-	dataa = f.read(buff)
-	multicasting_file = sys.argv[3]
-	with open(multicasting_file) as f:
-    	content=f.readlines()
-		#remove whitespace characters like line ending character at the end of each line
-		content = [x.strip() for x in content]
-		#Sending the data
-		while(content):
-			Print("Sending file...")
-			cs.sendto(dataa,content)                    #Sending data to the multicasting address
-			while (dataa):
-	  			#if(cs.sendto(data,addr)):
-	  			if(cs.sendto(dataa,(content,port))):
-	    		print("Sending File...")
-	    		dataa = f.read(buff)
-				f.close()                               #Closing the opened file
-				cs.close()                              #Closing the socket connection
-				print("File sent")
-	exit()
-else:
+
 ###Putting the file's content in buffer
-'''
 f=open(file_name,"rb")                  #Opening file in read mode 
 data = f.read(buf)                      #Taking the data from file into data variable
 
@@ -84,12 +60,3 @@ print("#                   File sent                    #")
 print("##################################################")
 os.remove(file_name)					#Delete the intermediate (encrypted file)
 cs.sendto(data,addr)                    #Sending data to the broadcasting address
-#The code below was responsible for all the errors during execution
-'''while (data):
-  #if(cs.sendto(data,addr)):
-  if(cs.sendto(data,(addr,port))):
-    print("Sending File...")
-    data = f.read(buf)
-f.close()                               #Closing the opened file
-cs.close()                              #Closing the socket connection
-'''
