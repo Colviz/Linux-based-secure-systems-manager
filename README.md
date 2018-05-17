@@ -1,7 +1,7 @@
-# Vince
+# Linux based secure systems manager *(Vince - former name)*
 > In development phase.
 > There can be discrepencies in the content provided below.
-> Please refer **learning** branch.
+> ~~Please refer **learning** branch.~~ Development now going in ``master`` branch.
 
 ## Main Components to consider -
 > Just for reference (not sure about their accuracy)
