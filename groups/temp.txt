@@ -1,4 +1,5 @@
 date
 date
 uptime
+sudo apt-get updaye
 10.42.0.1

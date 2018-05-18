@@ -1,4 +1,0 @@
-date
-date
-uptime
-10.42.0.1
