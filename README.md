@@ -36,8 +36,7 @@ chmod +x stuff.py
 ```
 Find out where your python is:
 
-which python
-``/usr/bin/python``
+`which python /usr/bin/python`
 
 Put this code in there:
 
