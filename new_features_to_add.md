@@ -3,12 +3,12 @@
 * [x] Payload authentication using asymmetric cryptography (RSA).
 * [x] Allow multicasting.
 * [x] Allow formation of client groups.
-4. Allow broadcasting to different networks simultaneously.
+* Allow broadcasting to different networks simultaneously.
 * [x] Status execution callbacks (return statuses of commands/instructions).
 * [x] Allow multiple admins (hence multiple keys).
 * [x] It should work on different networks.
 * [x] Client can request something/Chat portal.
-9. If Multiple admins broadcast then it should go in queue (or anything reliable).
+* If Multiple admins broadcast then it should go in queue (or anything reliable).
 
 
 ## Improvements
