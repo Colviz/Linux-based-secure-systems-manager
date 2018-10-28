@@ -102,13 +102,13 @@ The trick is that the bash shell knows the language of the file via the shebang.
 
 * For running the client script
 ```
-	python broadcasting_client.py
+python broadcasting_client.py
 ```
 Note - ``client`` will save the received file to ``files/file.txt``.
 
 * For running the server script (it requires input file)
 ```
-	python broadcasting_server.py temp.txt
+python broadcasting_server.py temp.txt
 ```
 Note - ``temp.txt`` holds all the commands that needs to be executed on the clients.
 
