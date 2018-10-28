@@ -16,4 +16,4 @@
 2. Flow charts,etc.
 3. Video and photos of the whole project
 4. Add more UI content/Improve UI
-5. Hide/Resolve errors
+5. Resolve errors
